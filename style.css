@@ -63,7 +63,7 @@ body {
     border-radius: 15px;
 }
 
-text-move {
+.text-move {
     text-size-adjust: 20px;
 }
 
@@ -176,4 +176,12 @@ footer {
 
 .scroll-button.right {
     right: -20px;
+}
+
+
+/* kondisi jika prangkat berbeda */
+@media (max-width: 450px) {
+    .navbar .user-menu {
+        display: none;
+    }
 }
