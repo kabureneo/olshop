@@ -1,0 +1,179 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #42b549;
+    padding: 10px 20px;
+    color: white;
+    /* color: #000000; */
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.search-bar {
+    flex-grow: 1;
+    margin: 0 20px;
+    display: flex;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+}
+
+.search-bar button {
+    padding: 10px;
+    background-color: #0e8f43;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar .user-menu {
+    overflow: scroll;
+    display: flex;
+    justify-content: none;
+    scrollbar-width: none;
+}
+
+.user-menu a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.user-menu-border {
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+text-move {
+    text-size-adjust: 20px;
+}
+
+.banner img {
+    
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* testing */
+.container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.card-container {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+}
+
+.card-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.card {
+    flex: 0 0 auto;
+    width: 200px;
+    margin-right: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.info {
+    padding: 10px;
+}
+
+.title {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.price {
+    font-size: 16px;
+    color: #ff4500;
+    margin-bottom: 5px;
+}
+
+.original-price {
+    font-size: 12px;
+    color: #999;
+    text-decoration: line-through;
+    margin-left: 5px;
+}
+
+.discount {
+    font-size: 12px;
+    color: #ff4500;
+}
+
+.location {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.rating {
+    font-size: 12px;
+    color: #666;
+}
+
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+}
+
+.scroll-button.left {
+    left: -20px;
+}
+
+.scroll-button.right {
+    right: -20px;
+}

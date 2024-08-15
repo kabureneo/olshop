@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: lightslategray;
+}
+
+.header {
+    background: url('background.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    background-color: black;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+.header-content h1 {
+    font-size: 36px;
+    margin: 20px 0 10px;
+}
+
+.header-content p {
+    font-size: 18px;
+}
+
+.about, .skills, .work, .blog, .contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.skills-grid, .work-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill, .work-grid img {
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+}
+
+.blog-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.blog-entry {
+    background: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .skill, .work-grid img {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+
+    .header-content h1 {
+        font-size: 28px;
+    }
+
+    .header-content p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skill, .work-grid img {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .header-content h1 {
+        font-size: 24px;
+    }
+
+    .header-content p {
+        font-size: 14px;
+    }
+}
