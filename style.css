@@ -103,24 +103,62 @@ footer {
     scrollbar-width: none; /* Firefox */
 }
 
+.card-container a {
+    text-decoration: none;
+}
+
 .card-container::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera */
+}
+
+.card-link {
+    text-decoration: none;
 }
 
 .card {
     flex: 0 0 auto;
     width: 200px;
     margin-right: 10px;
+    margin-bottom: 10px;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: all 1s;
+}
+.card-song {
+    flex: 0 0 auto;
+    width: 200px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #000000;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 1s;
+    color: white;
+    text-align: left;
+}
+
+.card:hover {
+
+    transform: translate(5px 5px);
+    transform: scale(2px);
 }
 
 .card img {
     width: 100%;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+}
+.card-song img {
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.card-song p {
+    color: white;
 }
 
 .info {
@@ -197,3 +235,4 @@ footer {
         display: flex;
     }
 }
+
