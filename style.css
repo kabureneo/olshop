@@ -67,9 +67,13 @@ body {
     text-size-adjust: 20px;
 }
 
-.benner {
+.banner {
     width: 100%;
     height: 100px;
+    background-image: url(img/One\ Piece.jpeg);
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
     background-color: black;
 }
 .banner img {
@@ -95,6 +99,12 @@ footer {
     margin: 20px auto;
 }
 
+.back {
+    background-image: url(img/download\ \(2\).jpeg);
+    padding: 10px 5px;
+    color: white;
+}
+
 .card-container {
     display: flex;
     transition: transform 0.3s ease-in-out;
@@ -103,7 +113,18 @@ footer {
     scrollbar-width: none; /* Firefox */
 }
 
+.card-container-mk {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
 .card-container a {
+    text-decoration: none;
+}
+
+.card-container-mk a {
     text-decoration: none;
 }
 
@@ -226,6 +247,15 @@ footer {
 @media (max-width: 450px) {
     .navbar .user-menu {
         display: none;
+    }
+
+    .card-container-mk {
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .card-song {
+        margin: 0px;
+        margin-bottom: 10px;
     }
 
 }
