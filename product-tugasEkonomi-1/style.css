@@ -1,0 +1,281 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #42b549;
+    padding: 10px 0px;
+    color: white;
+    position: fixed;
+    width: 100%;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.search-bar {
+    flex-grow: 1;
+    margin: 0 20px;
+    display: flex;
+}
+
+.search-bar input {
+    width: 100%;
+    max-width: 700px;
+    margin-left: 20px;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+}
+
+.search-bar button {
+    padding: 10px;
+    background-color: #0e8f43;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar .user-menu {
+    overflow: scroll;
+    margin-right: 20px;
+    display: flex;
+    justify-content: none;
+    scrollbar-width: none;
+}
+
+.user-menu a {
+    color: white;
+    margin-left: 20px;
+    
+    text-decoration: none;
+}
+
+.user-menu-border {
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.text-move {
+    text-size-adjust: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+.card {
+    flex: 0 0 auto;
+    width: 405px;
+    margin-right: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+    margin-top: 80px;
+}
+
+.card a {
+    text-decoration: none;
+}
+
+.card img {
+    width: 100%;
+}
+
+.info {
+    padding: 10px;
+}
+
+.title {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.price {
+    font-size: 16px;
+    color: #ff4500;
+    margin-bottom: 5px;
+}
+
+.original-price {
+    font-size: 12px;
+    color: #999;
+    text-decoration: line-through;
+    margin-left: 5px;
+}
+
+.artikel {
+    background-color: rgb(235, 235, 235);
+    margin: 50px 30px;
+    padding: 5px;
+    max-width: 500px;
+}
+
+.artikel .satu {
+    width: 100px;
+    height: 100px;
+    float: inline-start;
+    margin-right: 10px;
+}
+
+.artikel .dua {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    float: inline-start;
+    margin-right: 10px;
+}
+
+.sidebar {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    right: 20px;
+    top: 90px;
+}
+
+.header-side {
+    background-color: #24b24e;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.content-side label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.quantity-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.quantity-control button {
+    background-color: #24b24e;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.quantity-control input {
+    width: 40px;
+    text-align: center;
+    border: 1px solid #ddd;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.stock-side {
+    color: orange;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.price-side {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.add-cart, .buy-now {
+    background-color: #24b24e;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.footer-side button {
+    background-color: transparent;
+    border: none;
+    color: #24b24e;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.footer-side-kosong {
+    width: 300px;
+    height: 100px;
+}
+
+
+/* kondisi jika prangkat berbeda */
+@media (max-width: 500px) {
+
+    .navbar .user-menu {
+        display: none;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+        margin: 0px;
+        margin-top: 70px;
+        padding: 0px;
+        background-color: black;
+        color: white;
+    }
+
+    .card .img {
+        width: 99%;
+        border-radius: 5px;
+    }
+
+    .artikel {
+        display: none;
+    }
+
+    .footer-side-kosong {
+        display: none;
+    }
+
+    .sidebar {
+        position: relative;
+        
+
+    }
+
+}
+
+@media (min-width: 501px) {
+    .navbar .user-menu {
+        display: flex;
+    }
+}

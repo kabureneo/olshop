@@ -17,5 +17,3 @@ function scrollRight() {
         behavior: 'smooth'
     });
 }
-
-
