@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambil Value Checkbox</title>
+    <style>
+        .container {
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+
+        .clickable-div {
+            width: 200px;
+            height: 50px;
+            background-color: lightblue;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            margin: 10px 0;
+            padding: 0 10px;
+        }
+
+
+
+
+        .button-68 {
+  appearance: none;
+  backface-visibility: hidden;
+  background-color: #27ae60;
+  border-radius: 8px;
+  border-style: none;
+  box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: normal;
+  line-height: 1.5;
+  outline: none;
+  overflow: hidden;
+  padding: 13px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.button-68:hover {
+  background-color: #1e8449;
+  opacity: 1;
+  transform: translateY(0);
+  transition-duration: .35s;
+}
+
+.button-68:active {
+  transform: translateY(2px);
+  transition-duration: .35s;
+}
+
+.button-68:hover {
+  box-shadow: rgba(39, 174, 96, .2) 0 6px 12px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Checkbox pertama -->
+        <div class="clickable-div">
+            <label>Checkbox 1</label>
+            <input type="checkbox" class="checkbox" value="1.000">
+        </div>
+
+        <!-- Checkbox kedua -->
+        <div class="clickable-div">
+            <label>Checkbox 2</label>
+            <input type="checkbox" class="checkbox" value="2">
+        </div>
+
+        <!-- Checkbox ketiga -->
+        <div class="clickable-div">
+            <label>Checkbox 3</label>
+            <input type="checkbox" class="checkbox" value="3">
+        </div>
+    </div>
+
+    <p id="text">Klik tombol untuk mengubah teks.</p>
+    <button class="button-68" role="button" id="cekTombol">Ubah Teks</button>
+
+    
+
+    <script>
+        // Tangkap elemen button
+        const tombolCek = document.getElementById('cekTombol')
+
+        // Fungsi untuk mengambil nilai checkbox yang dicentang
+        function getCheckedValues() {
+            // Ambil semua checkbox yang dicentang
+            const checkedCheckboxes = document.querySelectorAll('.checkbox:checked');
+
+            // Ekstrak nilai checkbox ke dalam array
+            const values = Array.from(checkedCheckboxes).map(checkbox => checkbox.value);
+
+            return values;
+        };
+        
+        tombolCek.addEventListener("click", () => {
+            let dataHarga = [];
+            dataHarga = getCheckedValues();
+            
+            const totalHarga = dataHarga
+                .map(item => Number(item)) // Konversi elemen menjadi angka
+                .reduce((acc, current) => acc + current, 0); // Menjumlahkan elemen
+
+            const newText =`totalnya adalah ${totalHarga}.000`;
+            document.getElementById("text").innerText = newText;
+        });
+        // Event listener pada button
+        // getValuesBtn.addEventListener('click', () => {
+        //     const checkedValues = getCheckedValues();
+        //     console.log('Checkbox yang dicentang:', checkedValues);
+        //     alert('Checkbox yang dicentang: ' + checkedValues);
+        // });
+    </script>
+</body>
+</html>

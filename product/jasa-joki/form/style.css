@@ -13,13 +13,22 @@ body {
     font-size: 12px;
 }
 
+.wrapper {
+    cursor: pointer;
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    z-index: 10000;
+}
 .product {
     display: flex;
     gap: 10px;
     margin: 10px 0px;
     width: 100%;
     border: 1px solid black;
+    background-color: aliceblue;
     box-sizing: border-box;
+    z-index: 100;
 }
 
 .detail-product {
