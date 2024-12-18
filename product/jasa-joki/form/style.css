@@ -49,6 +49,29 @@ body {
     flex-grow: 1;
     padding: 5px 0;
     gap: 5px;
+    padding-right: 10px;
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.detail-product-text {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 5px 0;
+    gap: 5px;
+    padding-right: 10px;
+    font-size: 1.1rem;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.detail-product-text textarea {
+    border-radius: 100px;
+    text-align: center;
 }
 
 .images {

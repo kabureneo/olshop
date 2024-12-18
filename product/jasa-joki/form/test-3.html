@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encode Teks WhatsApp dengan Dua Input</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        input, button, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        .output {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>WhatsApp Link Encoder dengan Dua Input</h1>
+    
+    <label for="inputText1">Masukkan Pesan Pertama:</label><br>
+    <textarea id="inputText1" rows="4" placeholder="Masukkan pesan pertama di sini"></textarea><br>
+
+    <label for="inputText2">Masukkan Pesan Kedua:</label><br>
+    <textarea id="inputText2" rows="4" placeholder="Masukkan pesan kedua di sini"></textarea><br>
+    
+    <button id="encodeButton">Buat Link WhatsApp</button>
+    
+    <div class="output" id="outputLink"></div>
+
+    <script>
+        const inputText1 = document.getElementById('inputText1');
+        const inputText2 = document.getElementById('inputText2');
+        const encodeButton = document.getElementById('encodeButton');
+        const outputLink = document.getElementById('outputLink');
+
+        encodeButton.addEventListener('click', () => {
+            const text1 = inputText1.value.trim(); // Ambil nilai dari input pertama
+            const text2 = inputText2.value.trim(); // Ambil nilai dari input kedua
+
+            if (text1 === "" || text2 === "") {
+                outputLink.textContent = "Harap masukkan pesan untuk kedua input!";
+                outputLink.style.color = "red";
+                return;
+            }
+
+            // Gabungkan kedua teks dan encode menjadi URL yang aman
+            const combinedText = `${text1}\n${text2}`; // Menambahkan newline antara pesan
+            const encodedText = encodeURIComponent(combinedText);
+
+            // Format link WhatsApp
+            const waLink = `https://wa.me/?text=${encodedText}`;
+
+            // Tampilkan hasil
+            outputLink.innerHTML = `Hasil Link WhatsApp: <a href="${waLink}" target="_blank">${waLink}</a>`;
+            outputLink.style.color = "#333";
+        });
+    </script>
+</body>
+</html>
