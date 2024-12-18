@@ -6,13 +6,25 @@ body {
     box-sizing: border-box;
 }
 .container {
-    width: 90%;
-    margin: 20px auto;
-    background-color: antiquewhite;
+    
     box-sizing: border-box;
     font-size: 12px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
+.container h2 {
+    margin-bottom: -20px;
+    margin-left: 5px;
+}
+
+.type {
+    width: 100%;
+    padding: 20px auto;
+    background-color: aliceblue;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 .wrapper {
     cursor: pointer;
     width: 100%;
@@ -22,10 +34,11 @@ body {
 }
 .product {
     display: flex;
-    gap: 10px;
-    margin: 10px 0px;
-    width: 100%;
-    border: 1px solid black;
+    margin: 0px auto;
+    margin-top: 10px;
+    width: 90%;
+    border: 1px solid rgb(96, 96, 96);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.217);
     background-color: aliceblue;
     box-sizing: border-box;
     z-index: 100;
@@ -42,6 +55,7 @@ body {
 .images {
     width: 100px;
     height: 100px;
+    margin-right: 10px;
     background-color: salmon;
 }
 
