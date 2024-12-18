@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: #000000;
     box-sizing: border-box;
 }
 .container {
@@ -13,16 +13,15 @@ body {
 }
 
 .container h2 {
-    margin-bottom: -20px;
+    margin-bottom: -30px;
     margin-left: 5px;
 }
 
 .type {
     width: 100%;
-    padding: 20px auto;
     background-color: aliceblue;
     margin-bottom: 20px;
-    padding-top: 20px;
+    padding-top: 30px;
     padding-bottom: 20px;
 }
 .wrapper {
@@ -81,3 +80,43 @@ body {
     align-items: flex-end;
 }
 
+/* bagian css kategori */
+.list-product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-shrink: 1;
+}
+.kategori {
+    cursor: pointer;
+    width: 150px;
+    background-color: #87d6f5;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    color: rgb(0, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.kategori.price-kategori {
+    background-color: #f6f5fc;
+    width: 100%;
+    height: 50px;
+}
+.kategori:hover {
+    background-color: #ddd;
+}
+.konten-div {
+    display: none; /* Menyembunyikan div pada awalnya */
+}
+.konten-div.aktif {
+    display: block; /* Menampilkan hanya div yang aktif */
+}

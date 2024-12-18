@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox Eksklusif</title>
+</head>
+<body>
+    <h1>Pilih Satu Saja</h1>
+    <label><input type="checkbox" class="single-checkbox" value="Option 1"> Pilihan 1</label><br>
+    <label><input type="checkbox" class="single-checkbox" value="Option 2"> Pilihan 2</label><br>
+    <label><input type="checkbox" class="single-checkbox" value="Option 3"> Pilihan 3</label><br>
+
+    <script>
+        // Ambil semua checkbox dengan class "single-checkbox"
+        const checkboxes = document.querySelectorAll('.single-checkbox');
+
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('click', () => {
+                // Jika checkbox ini dicentang, hapus centang dari checkbox lain
+                if (checkbox.checked) {
+                    checkboxes.forEach(cb => {
+                        if (cb !== checkbox) {
+                            cb.checked = false;
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
