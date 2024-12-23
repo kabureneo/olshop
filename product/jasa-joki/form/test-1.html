@@ -1,60 +1,90 @@
-<!-- HTML !-->
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <style>.button-68 {
-    appearance: none;
-    backface-visibility: hidden;
-    background-color: #27ae60;
-    border-radius: 8px;
-    border-style: none;
-    box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
-    box-sizing: border-box;
-    color: #fff;
-    cursor: pointer;
-    display: inline-block;
-    font-family: Inter,-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: normal;
-    line-height: 1.5;
-    outline: none;
-    overflow: hidden;
-    padding: 13px 20px;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    transform: translate3d(0, 0, 0);
-    transition: all .3s;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    vertical-align: top;
-    white-space: nowrap;
-  }
-  
-  .button-68:hover {
-    background-color: #1e8449;
-    opacity: 1;
-    transform: translateY(0);
-    transition-duration: .35s;
-  }
-  
-  .button-68:active {
-    transform: translateY(2px);
-    transition-duration: .35s;
-  }
-  
-  .button-68:hover {
-    box-shadow: rgba(39, 174, 96, .2) 0 6px 12px;
-  }</style>
 </head>
 <body>
-  <button class="button-68" role="button">Button 68</button>
+  <div class="form-container">
+    <label>
+        Nama:
+        <input type="text" id="name" class="form-input" placeholder="Masukkan nama">
+    </label>
+    <label>
+        Tanggal Lahir:
+        <input type="date" id="birthdate" class="form-input">
+    </label>
+    <label>
+        Email:
+        <input type="email" id="email" class="form-input" placeholder="Masukkan email">
+    </label>
+    <label>
+        Produk Pilihan:
+        <div class="checkbox-container">
+            <div class="wrapper" data-target="product1">Produk 1</div>
+            <div class="wrapper" data-target="product2">Produk 2</div>
+            <input type="checkbox" id="product1" class="single-checkbox" value="Produk 1">
+            <input type="checkbox" id="product2" class="single-checkbox" value="Produk 2">
+        </div>
+    </label>
+    <button id="submit-btn">Kirim</button>
+</div>
+<div id="output">Hasil akan ditampilkan di sini.</div>
+
+
+
+  <script>
+    const formContainer = document.querySelector('.form-container');
+const output = document.getElementById('output');
+const checkboxContainer = document.querySelector('.checkbox-container');
+
+// Objek untuk menyimpan nilai input lainnya
+const formData = {};
+// Variabel untuk menyimpan checkbox yang dicentang
+let selectedCheckboxValue = null;
+
+// Delegasi event untuk semua input (teks, date, email)
+formContainer.addEventListener('input', (event) => {
+    const target = event.target;
+
+    if (target.classList.contains('form-input')) {
+        const name = target.id || target.name; // Gunakan id atau name sebagai key
+        formData[name] = target.value; // Simpan nilai input ke formData
+    }
+});
+
+// Delegasi event untuk checkbox
+checkboxContainer.addEventListener('click', (event) => {
+    if (event.target.classList.contains('wrapper')) {
+        const targetCheckboxId = event.target.getAttribute('data-target');
+        const checkbox = document.getElementById(targetCheckboxId);
+
+        if (checkbox) {
+            // Logika hanya satu checkbox bisa dicentang
+            document.querySelectorAll('.single-checkbox').forEach(cb => {
+                cb.checked = cb === checkbox;
+            });
+
+            // Perbarui nilai checkbox yang dicentang
+            selectedCheckboxValue = checkbox.checked ? checkbox.value : null;
+        }
+    }
+});
+
+// Event listener untuk tombol submit
+document.getElementById('submit-btn').addEventListener('click', () => {
+    // Gabungkan nilai checkbox dengan input lainnya
+    const completeData = {
+        ...formData,
+        selectedProduct: selectedCheckboxValue
+    };
+
+    // Tampilkan hasil
+    output.textContent = `Data Form: ${JSON.stringify(completeData, null, 2)}`;
+    console.log(completeData); // Log hasil lengkap ke konsol
+});
+
+  </script>
 </body>
 </html>
