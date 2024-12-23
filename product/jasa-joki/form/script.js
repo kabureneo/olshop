@@ -59,3 +59,27 @@ kategoriElements.forEach(kategori => {
         }
     });
 });
+
+
+// link wa
+const inputText1 = document.getElementById('inputText1');
+const inputText2 = document.getElementById('inputText2');
+const encodeButton = document.getElementById('encodeButton');
+
+encodeButton.addEventListener('click', () => {
+    const text1 = inputText1.value.trim(); // Ambil nilai dari input pertama
+    const text2 = inputText2.value.trim(); // Ambil nilai dari input kedua
+
+    if (text1 === "" || text2 === "") {
+        outputLink.textContent = "Harap masukkan pesan untuk kedua input!";
+        outputLink.style.color = "red";
+        return;
+    }
+
+    // Gabungkan kedua teks dan encode menjadi URL yang aman
+    const combinedText = `${text1}\n${text2}`; // Menambahkan newline antara pesan
+    const encodedText = encodeURIComponent(combinedText);
+
+    // Format link WhatsApp
+    const waLink = `https://wa.me/?text=${encodedText}`;
+});
