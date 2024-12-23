@@ -1,3 +1,36 @@
+//bagian kategori
+// Cache elemen yang sering digunakan
+const kategoriElements = document.querySelectorAll('.kategori');
+const kontenDivs = {}; // Objek cache untuk div konten
+let aktifDiv = null;  // Referensi div aktif saat ini
+
+// Inisialisasi cache untuk konten-div
+document.querySelectorAll('.konten-div').forEach(div => {
+    kontenDivs[div.id] = div;
+});
+
+// Fungsi untuk menangani klik kategori
+kategoriElements.forEach(kategori => {
+    kategori.addEventListener('click', () => {
+        const targetId = kategori.getAttribute('data-kategori');
+
+        // Jika div aktif sama dengan yang diklik, tidak melakukan apa-apa
+        if (aktifDiv && aktifDiv.id === targetId) return;
+
+        // Sembunyikan div aktif sebelumnya (jika ada)
+        if (aktifDiv) {
+            aktifDiv.classList.remove('aktif');
+        }
+
+        // Tampilkan div baru dan perbarui referensi aktif
+        aktifDiv = kontenDivs[targetId];
+        if (aktifDiv) {
+            aktifDiv.classList.add('aktif');
+        }
+    });
+});
+
+//bagian isi form
 const checkboxes = document.querySelectorAll('.single-checkbox');
 const container = document.querySelector('.container');
 const formContainer = document.querySelector('.konten-divv');
@@ -86,39 +119,14 @@ Tiers : ${completeData.selectedProduct}`
     // Format link WhatsApp
     const waLink = `https://wa.me/+6287859430256?text=${encodedText}`;
     console.log(waLink);
+    
+    const link = document.getElementById('myLink');
+    const kirim = document.getElementById('myKirim')
+    // Ubah href menjadi tautan baru
+    link.href = waLink;
+    kirim.style.backgroundColor = "#27ae60";
 });
 
 
 
 
-//bagian kategori
-// Cache elemen yang sering digunakan
-const kategoriElements = document.querySelectorAll('.kategori');
-const kontenDivs = {}; // Objek cache untuk div konten
-let aktifDiv = null;  // Referensi div aktif saat ini
-
-// Inisialisasi cache untuk konten-div
-document.querySelectorAll('.konten-div').forEach(div => {
-    kontenDivs[div.id] = div;
-});
-
-// Fungsi untuk menangani klik kategori
-kategoriElements.forEach(kategori => {
-    kategori.addEventListener('click', () => {
-        const targetId = kategori.getAttribute('data-kategori');
-
-        // Jika div aktif sama dengan yang diklik, tidak melakukan apa-apa
-        if (aktifDiv && aktifDiv.id === targetId) return;
-
-        // Sembunyikan div aktif sebelumnya (jika ada)
-        if (aktifDiv) {
-            aktifDiv.classList.remove('aktif');
-        }
-
-        // Tampilkan div baru dan perbarui referensi aktif
-        aktifDiv = kontenDivs[targetId];
-        if (aktifDiv) {
-            aktifDiv.classList.add('aktif');
-        }
-    });
-});
