@@ -468,6 +468,8 @@ body {
     transform: translateX(-50%);
     transition: width 0.4s ease, height 0.4s ease;
     z-index: 100;
+    text-decoration: none;
+    color: white;
   }
 
   .order:hover {
