@@ -25,7 +25,7 @@ Ini adalah proyek website toko online sederhana yang dibangun menggunakan **HTML
 
 > Tambahkan screenshot di sini (opsional)  
 Contoh:
-![preview](images/preview.png)
+![preview](img/preview.png)
 
 ## 🚀 Cara Menjalankan
 
