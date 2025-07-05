@@ -23,8 +23,6 @@ Ini adalah proyek website toko online sederhana yang dibangun menggunakan **HTML
 
 ## 🖼️ Preview
 
-> Tambahkan screenshot di sini (opsional)  
-Contoh:
 ![preview](img/preview.png)
 
 ## 🚀 Cara Menjalankan
@@ -42,12 +40,8 @@ Tidak diperlukan server atau framework tambahan karena ini adalah website statis
 - Website ini belum terintegrasi dengan sistem backend atau payment gateway.
 - Cocok untuk latihan, pengembangan awal, atau presentasi UI toko online.
 
-## 💡 Pengembangan Selanjutnya (opsional)
+## 💡 Pengembangan Selanjutnya
 
 - Menambahkan fitur keranjang belanja (shopping cart)
 - Integrasi sistem login/daftar
 - Backend sederhana menggunakan Firebase / Node.js
-
-## 📄 Lisensi
-
-Proyek ini menggunakan lisensi MIT (atau ubah sesuai kebutuhanmu).
