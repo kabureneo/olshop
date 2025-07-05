@@ -1,9 +1,53 @@
-# tugas-sekolah-rendom
+# 🛍️ Website Online Shop Sederhana
 
-penjelasan
-tugas persentase berbasis web
-kami menggunakan media web untuk sarana persentase
+Ini adalah proyek website toko online sederhana yang dibangun menggunakan **HTML**, **CSS**, dan **JavaScript**. Website ini dirancang sebagai halaman statis untuk menampilkan produk, deskripsi, harga, dan tombol beli sederhana.
 
-penjelasan tengan web yang di buat
-- menggunakan tampilan seperti website e-commerce(menirukan tokopedia)
-- website berbasis have fun
+## 🔧 Fitur Utama
+
+- Tampilan responsif
+- Daftar produk dengan gambar, nama, dan harga
+- Tombol "Beli Sekarang" (belum terhubung ke backend)
+- Navigasi sederhana
+- Animasi dasar menggunakan CSS dan JavaScript
+
+## 📁 Struktur Folder
+
+```
+.
+├── index.html
+├── style.css
+├── script.js
+├── /images
+│   └── (gambar produk)
+```
+
+## 🖼️ Preview
+
+> Tambahkan screenshot di sini (opsional)  
+Contoh:
+![preview](images/preview.png)
+
+## 🚀 Cara Menjalankan
+
+1. Clone repository:
+   ```bash
+   git clone https://github.com/username/nama-repo-olshop.git
+   ```
+2. Buka file `index.html` di browser.
+
+Tidak diperlukan server atau framework tambahan karena ini adalah website statis.
+
+## 📌 Catatan
+
+- Website ini belum terintegrasi dengan sistem backend atau payment gateway.
+- Cocok untuk latihan, pengembangan awal, atau presentasi UI toko online.
+
+## 💡 Pengembangan Selanjutnya (opsional)
+
+- Menambahkan fitur keranjang belanja (shopping cart)
+- Integrasi sistem login/daftar
+- Backend sederhana menggunakan Firebase / Node.js
+
+## 📄 Lisensi
+
+Proyek ini menggunakan lisensi MIT (atau ubah sesuai kebutuhanmu).
